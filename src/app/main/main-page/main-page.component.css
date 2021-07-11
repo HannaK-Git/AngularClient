@@ -1,0 +1,29 @@
+.search{
+    margin: 20px;
+}
+
+.buttonAdd{
+    background-color: khaki;
+    margin-left: 40px;
+    width: 50px;
+    
+}
+
+
+.floatRightForAddUser
+{
+    
+    position: absolute;
+    top: 30px;
+    right: 20%;
+    
+    
+}
+
+.floatLeft
+{
+    
+        position: relative;
+
+}
+

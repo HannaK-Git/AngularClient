@@ -1,0 +1,27 @@
+<p>New Todo - User {{userId}}</p>
+
+<div class="mainnewtodo">
+
+<form #f=ngForm>
+    <div style="margin: 10px;">
+<span style="margin: 10px;">Title:</span>
+
+<input type="text" name="title" [(ngModel)]="sometasks.title" />    
+</div>
+
+
+<a [routerLink]="['/todoandposts', userId]"> <app-button style="float: right;" text="Cancel" color="khaki" ></app-button> </a>
+<app-button style="float: right;" text="Add" color="khaki" (btnClick)="add()"></app-button> 
+</form>
+
+</div> 
+<br>
+<div style="margin: 10px;">
+Posts - User:  {{userId}}  
+<a [routerLink]='["/newpost", userId]'>
+<app-button style="float: right;" text="Add" color="khaki" ></app-button> 
+</a>
+</div> 
+<div style="border: solid black 2px;">
+<app-user-post [postID]=post *ngFor="let post of user.posts" ></app-user-post>
+</div>

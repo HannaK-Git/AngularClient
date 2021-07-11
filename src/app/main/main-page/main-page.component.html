@@ -1,0 +1,27 @@
+
+
+
+
+<div class="search">
+
+    Search: <input type="text" name="firstName" [(ngModel)]="firstName" (ngModelChange)="serachByNameOrEmail()"
+    placeholder="Search">
+    <app-button text="Add" color="khaki"  (btnClick)="newUserCompExist= !newUserCompExist"></app-button>
+</div>
+
+
+<app-users-page class="floatLeft" [dataAboutUsers]="u" *ngFor="let u of users" ></app-users-page>
+
+<div class="floatRightForAddUser" >
+
+<app-add-new-user-comp (onAddUser)="addUser($event)" *ngIf="newUserCompExist"></app-add-new-user-comp>
+
+
+</div>
+
+<div style="float: right; position: absolute;
+top: 300px;
+right: 20%;">
+
+<router-outlet></router-outlet>
+</div>

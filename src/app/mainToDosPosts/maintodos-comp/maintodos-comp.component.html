@@ -1,0 +1,22 @@
+
+ <div style="margin: 10px;">
+  Todos - User:  {{UserData._id}} <a [routerLink]='["/newtodo", UserData._id]'>
+    <app-button style="float: right;" text="Add" color="khaki" ></app-button>
+  </a>
+ 
+</div>
+    
+  <div style="border: solid black 2px;">
+   <app-user-todos (onToggleCompleted)="toggleCompleted(task)" [todosID]="task"   *ngFor ="let task of UserData.tasks" ></app-user-todos>
+  </div>
+  <br/>
+  <div style="margin: 10px;">
+   Posts - User:  {{UserData._id}}  
+   <a [routerLink]='["/newpost", UserData._id]'>
+   <app-button style="float: right;" text="Add" color="khaki" ></app-button> 
+  </a>
+  </div>
+   <div style="border: solid black 2px;">
+   <app-user-post [postID]="posts" *ngFor ="let posts of UserData.posts"></app-user-post>
+  </div>
+   <router-outlet></router-outlet>

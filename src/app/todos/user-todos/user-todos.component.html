@@ -1,0 +1,21 @@
+
+
+
+
+
+<div class="mainTodosDiv">
+
+<div class="divForTodos">
+
+<span style="color: black">Title: {{todosID.title}} </span> <br/>
+
+<span style="color: black">Completed: {{todosID.completed}}  </span> 
+<span *ngIf="!todosID.completed">
+
+<input type="button" value="Mark Completed" (click)="onToggle()" />
+</span>
+
+
+</div>
+
+</div>

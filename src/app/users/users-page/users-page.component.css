@@ -1,0 +1,48 @@
+
+
+.mainclass{
+    
+    padding: 20px;
+    border: solid green 2px;
+    width: 350px;
+    margin: 40px;
+  
+}
+
+.redclass{
+    
+    padding: 20px;
+    border: solid red 2px;
+    width: 350px;
+    margin: 40px;
+  
+}
+
+span{
+    float: right;
+}
+
+.button{
+    
+    background-color: grey;
+   
+    border-radius: 4px;
+}
+
+
+
+.hiddenDiv
+{
+    border: solid black 2px;
+    background-color: lightblue;
+    border-radius: 30px;
+    margin-left: -10px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    padding: 15px;
+    width: 300px;
+
+}
+
+
+

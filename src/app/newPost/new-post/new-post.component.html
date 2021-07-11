@@ -1,0 +1,29 @@
+
+ <div style="margin: 10px;">
+  Todos - User:  {{userId}} <a [routerLink]='["/newtodo", userId]'>
+    <app-button style="float: right;" text="Add" color="khaki" ></app-button>
+  </a>
+ 
+</div> 
+    
+  <div style="border: solid black 2px;"> 
+  
+    <app-user-todos [todosID]="task" *ngFor="let task of user.tasks" ></app-user-todos>
+  </div>
+  <br/>  
+
+<p>New Post - User {{userId}} </p>
+
+<div class="mainnewpost">
+<form #f=ngForm>
+    <div style="margin: 10px;">
+<label>Title:</label>
+<input type="text" name="title" [(ngModel)]="newPost.title" /> <br/>
+<label>Body:</label>
+<input type="text" name="body" [(ngModel)]="newPost.body" /> <br/>
+  </div>
+
+<a [routerLink]="['/todoandposts', userId]"><app-button style="float: right;" text="Cancel" color="khaki" ></app-button> </a>
+<app-button style="float: right;" text="Add" color="khaki" (btnClick)="add()"></app-button> 
+</form>
+</div>

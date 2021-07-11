@@ -1,0 +1,35 @@
+
+
+<div [style.background-color]="showTodos ? '#F7B935' : '#FFFFFF'" class={{completedTasks}} >
+
+<form #f=ngForm>
+<a [routerLink]='["/todoandposts", dataAboutUsers._id]' style="text-decoration: none;" (click)="componentRerender()" > ID: {{dataAboutUsers._id}} </a>  <br/> <br/>
+
+     
+
+
+Name: <input type="text" #name name="name" [(ngModel)]="dataAboutUsers.name"> <br> <br>
+Email: <input type="text" #email name="email" [(ngModel)]="dataAboutUsers.email"> <br><br>
+
+<input class="button" type="button" value="Other Data" (click)="isExist=false" (mouseover)="isExist=true"> 
+
+<div class="hiddenDiv" *ngIf="isExist" >
+    Street: <input type="text" #street name="street" [(ngModel)]="dataAboutUsers.street"> <br>
+    City: <input type="text" #city name="city" [(ngModel)]="dataAboutUsers.city"> <br>
+    Zip Code: <input type="text" #zipcode name="zipcode" [(ngModel)]="dataAboutUsers.zipcode"> <br>
+</div>
+
+       <span><div class="rightButton">
+           <app-button text="Update" color="khaki" (btnClick)="update(dataAboutUsers._id, dataAboutUsers.name, dataAboutUsers.email, dataAboutUsers.street, dataAboutUsers.city, dataAboutUsers.zipcode)" ></app-button>
+           <app-button text="Delete" color="khaki" (btnClick)="delete(dataAboutUsers._id)"></app-button>
+       </div></span>
+       <br/>
+</form>
+
+
+    
+
+
+</div>
+
+

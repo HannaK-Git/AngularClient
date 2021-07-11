@@ -1,0 +1,21 @@
+<div *ngIf="isnotExist">
+<h3>Add New User</h3>
+<div class="mainDiv">
+
+<form #f=ngForm >
+<div class="inputForms">
+Name: <input type="text"  name="name" [(ngModel)]="name" placeholder="Add Name"/> <br/>
+Email: <input type="text"  name="email" [(ngModel)]="email" placeholder="Add Email"/> <br/> <br/>
+</div>
+
+<div class="rightbuttons" >
+    <app-button text="Cancel" color="khaki" (btnClick)="isnotExist =!isnotExist"></app-button>
+    <app-button text="Add" color="khaki" (btnClick)="add()"></app-button>
+    
+</div>
+<br/>
+
+
+</form>
+</div>
+</div>
